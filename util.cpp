@@ -5,7 +5,7 @@
 #include<fstream>
 #include"include/human.h"
 
-void load(human* person)
+void loadPerson(human* person)
 {
 	string data;
 	ifstream input("./data/person", ios::in);
@@ -14,8 +14,10 @@ void load(human* person)
 	person->setNum(atoi(data.c_str()));
 }
 
-void save(human* person)
+void savePerson(human* person)
 {
+	ifstream temp("./data/person", ios::in);
+	if(temp.fail()) system("mkdir data");
 	ofstream output("./data/person", ios::out);
 	output<<person->getNum();
 	output.close();
