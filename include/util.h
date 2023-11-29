@@ -1,3 +1,5 @@
 #include"human.h"
 int kbhit(void);
-void save(human* person);
+void savePerson(human* person);
+void loadPerson(human* person);
+
