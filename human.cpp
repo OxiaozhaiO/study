@@ -3,9 +3,10 @@ void human::talkAbout()
 {
 	cout<<getName()<<" %"<<getNum()<<"\n\t"<<"hi~ "<<getYourname()<<endl;
 }
+
 void human::talkAbout(string content)
 {
-	cout<<getName()<<" %"<<getNum()<<"\n\t";
+	cout<<getName()<<" %"<<getNum()<<":\n\t";
 	
 	if(findStr(content,"hi") || findStr(content, "hello"))cout<<"hi"<<endl;
 	else if(findStr(content, "exit") || findStr(content, "quit") )cout<<"Byebye~"<<endl;

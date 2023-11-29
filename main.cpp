@@ -5,19 +5,23 @@ using namespace std;
 human* createHuman()
 {
 	human* person = new human();
+	person->setYourname("xiaozhai");
+	person->talkAbout();
 	loadPerson(person);
 	return person;
 }
 int main()
 {
 	human* person = createHuman();
-	string talk; 
+	char input;
 	while(1)
 	{
-		person->setYourname("xiaozhai");
-		person->talkAbout();
+		string talk; 
 		cout<<person->getYourname()<<":\n\t";
-		cin>>talk;
+		while((input=getchar())!= '\n')
+		{
+			talk.push_back(input);
+		}
 		person->talkAbout(talk);
 		if(findStr(talk, "quit") || findStr(talk, "exit")) break;
 	}
