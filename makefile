@@ -1,5 +1,5 @@
 target=main
-object=main.o util.o
+object=main.o util.o human.o
 CC=g++
 $(target):$(object)
 	$(CC) -o $(target) $(object)
@@ -8,4 +8,4 @@ $(target):$(object)
 
 .PHONY:clean
 clean:
-	rm $(target) $(object)
+	rm $(target) $(object) ./data/*
