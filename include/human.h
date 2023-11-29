@@ -12,6 +12,6 @@ public:
 	void talkAbout(string selfname);
 	string getName();
 	int getAge();
-    int getNum();
+	int getNum();
 	void setNum(int num);
 };
