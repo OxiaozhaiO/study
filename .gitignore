@@ -4,3 +4,4 @@ main
 main.o
 human.o
 util.o
+*.o
