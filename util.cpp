@@ -5,6 +5,8 @@
 #include<fstream>
 #include"include/human.h"
 
+void load(human* person);
+
 void save(human* person)
 {
 	ifstream input;
@@ -17,8 +19,7 @@ void save(human* person)
 		output<<person->getNum();
 		output.close();
 	}
-	getline(input, dataStr);
-	person->setNum(atoi(dataStr.c_str()));
+	input.close();
 }
 
 int kbhit(void)
