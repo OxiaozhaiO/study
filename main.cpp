@@ -1,11 +1,11 @@
 #include"include/util.h"
 #include<fstream>
+#include<string>
 using namespace std;
 human* createHuman()
 {
 	human* person = new human();
 	loadPerson(person);
-	savePerson(person);
 	return person;
 }
 int main()
@@ -19,7 +19,8 @@ int main()
 		cout<<person->getYourname()<<":\n\t";
 		cin>>talk;
 		person->talkAbout(talk);
-		if(talk.find("quit") || talk.find("exit")) break;
+		if(findStr(talk, "quit") || findStr(talk, "exit")) break;
 	}
+	savePerson(person);
 	return 0;
 }

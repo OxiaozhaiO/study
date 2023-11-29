@@ -1,5 +1,4 @@
-#include"include/human.h"
-
+#include"include/util.h"
 void human::talkAbout()
 {
 	cout<<getName()<<" %"<<getNum()<<"\n\t"<<"hi~ "<<getYourname()<<endl;
@@ -8,8 +7,8 @@ void human::talkAbout(string content)
 {
 	cout<<getName()<<" %"<<getNum()<<"\n\t";
 	
-	if(content.find("hi"))cout<<"hi"<<endl;
-	else if(content.find("exit")) cout<<"Byebye~"<<endl;
+	if(findStr(content,"hi") || findStr(content, "hello"))cout<<"hi"<<endl;
+	else if(findStr(content, "exit") || findStr(content, "quit") )cout<<"Byebye~"<<endl;
 }
 
 string human::getName(){return name;}
