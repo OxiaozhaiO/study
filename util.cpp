@@ -2,6 +2,24 @@
 #include <termios.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include<fstream>
+#include"include/human.h"
+
+void save(human* person)
+{
+	ifstream input;
+	string dataStr;
+	input.open("./data/person", ios::in);
+	if(input.fail())
+	{
+		system("mkdir data");
+		ofstream output("./data/person", ios::out);
+		output<<person->getNum();
+		output.close();
+	}
+	getline(input, dataStr);
+	person->setNum(atoi(dataStr.c_str()));
+}
 
 int kbhit(void)
 {
