@@ -4,6 +4,11 @@
 #include <fcntl.h>
 #include<fstream>
 #include"include/human.h"
+bool findStr(string str, const char* target)
+{
+	if(str.find(target) == -1) return 0;
+	return 1;
+}
 
 void loadPerson(human* person)
 {
