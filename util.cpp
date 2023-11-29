@@ -5,21 +5,20 @@
 #include<fstream>
 #include"include/human.h"
 
-void load(human* person);
+void load(human* person)
+{
+	string data;
+	ifstream input("./data/person", ios::in);
+	if(input.fail()) return;
+	getline(input,data);
+	person->setNum(atoi(data.c_str()));
+}
 
 void save(human* person)
 {
-	ifstream input;
-	string dataStr;
-	input.open("./data/person", ios::in);
-	if(input.fail())
-	{
-		system("mkdir data");
-		ofstream output("./data/person", ios::out);
-		output<<person->getNum();
-		output.close();
-	}
-	input.close();
+	ofstream output("./data/person", ios::out);
+	output<<person->getNum();
+	output.close();
 }
 
 int kbhit(void)
