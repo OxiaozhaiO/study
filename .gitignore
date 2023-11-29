@@ -1,3 +1,6 @@
 token
 data
-.gitignore
+main
+main.o
+human.o
+util.o

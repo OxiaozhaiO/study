@@ -7,11 +7,14 @@ private:
 	string name;
 	int age, num;
 	string stat;
+	string yourname;
 public:
 	human();
-	void talkAbout(string selfname);
+	void talkAbout();
 	string getName();
 	int getAge();
 	int getNum();
+	string getYourname();
 	void setNum(int num);
+	void setYourname(string name);
 };

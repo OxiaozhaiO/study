@@ -3,9 +3,9 @@
 using namespace std;
 void createHuman()
 {
-	string myname = "xiaozhai";
 	human person = human();
-	person.talkAbout(myname);
+	person.setYourname("xiaozhai");
+	person.talkAbout();
 	save(&person);
 }
 int main()

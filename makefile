@@ -8,4 +8,4 @@ $(target):$(object)
 
 .PHONY:clean
 clean:
-	rm $(target) $(object) ./data/*
+	rm -rf $(target) $(object) 
