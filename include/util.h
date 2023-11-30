@@ -5,4 +5,5 @@ void loadPerson(human* person);
 void getTime();
 void getDate();
 int kbhit(void);
+int randSum(int n);
 

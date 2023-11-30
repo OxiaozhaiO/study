@@ -5,6 +5,11 @@
 #include<fstream>
 #include"include/human.h"
 #include<ctime>
+int randSum(int n)
+{
+	srand((int)(time(NULL)));
+	return rand()%n;
+}
 void getDate()
 {
 	time_t now = time(NULL);
