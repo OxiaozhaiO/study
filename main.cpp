@@ -5,9 +5,9 @@ using namespace std;
 human* createHuman()
 {
 	human* person = new human();
+	loadPerson(person);
 	person->setYourname("xiaozhai");
 	person->talkAbout();
-	loadPerson(person);
 	return person;
 }
 int main()
@@ -17,13 +17,17 @@ int main()
 	while(1)
 	{
 		string talk; 
-		cout<<person->getYourname()<<":\n\t";
-		while((input=getchar())!= '\n')
+
+		cout<<person->getYourname()<<":\n\t";//you turn talk
+		while((input=getchar())!= '\n') talk.push_back(input); // talk something
+
+		if(findStr(talk, "bye") || findStr(talk, "Bye") || findStr(talk, "i have to go"))//quit while()
 		{
-			talk.push_back(input);
+			person->exitTalk();
+			break;
 		}
-		person->talkAbout(talk);
-		if(findStr(talk, "quit") || findStr(talk, "exit")) break;
+
+		person->talkAbout(talk);//other turn
 	}
 	savePerson(person);
 	return 0;
