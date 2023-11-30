@@ -4,6 +4,21 @@
 #include <fcntl.h>
 #include<fstream>
 #include"include/human.h"
+#include<ctime>
+void getDate()
+{
+	time_t now = time(NULL);
+	char temp[64];
+	strftime(temp, sizeof(temp), "%Y-%m-%d", localtime(&now));
+	cout<<temp<<endl;
+}
+void getTime()
+{
+	time_t now = time(NULL);
+	char temp[64];
+	strftime(temp, sizeof(temp), "%H:%M:%S", localtime(&now));
+	cout<<temp<<endl;
+}
 bool findStr(string str, const char* target)
 {
 	if(str.find(target) == -1) return 0;
