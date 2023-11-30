@@ -9,16 +9,22 @@ private:
 	int age, num;
 	string stat;
 	string yourname;
-	string talk[100];
+	string requbad[3]={
+		"fuck you too 凸-^-",
+		"you should scold me?!",
+		"why hit me?" };
 public:
 	human();
 	void talkAbout();
 	void talkAbout(string content);
+
 	void exitTalk();
-	string getName();
+
+	void setNum(int num);
+	void setYourname(string name);
+
 	int getAge();
 	int getNum();
 	string getYourname();
-	void setNum(int num);
-	void setYourname(string name);
+	string getName();
 };
