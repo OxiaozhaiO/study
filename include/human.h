@@ -14,6 +14,7 @@ public:
 	human();
 	void talkAbout();
 	void talkAbout(string content);
+	void exitTalk();
 	string getName();
 	int getAge();
 	int getNum();

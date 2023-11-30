@@ -9,7 +9,20 @@ void human::talkAbout(string content)
 	cout<<getName()<<" %"<<getNum()<<":\n\t";
 	
 	if(findStr(content,"hi") || findStr(content, "hello"))cout<<"hi"<<endl;
-	else if(findStr(content, "exit") || findStr(content, "quit") )cout<<"Byebye~"<<endl;
+	else if(findStr(content,"what the time") || findStr(content, "what time"))
+	{
+		cout<<"is "; getTime();
+	}
+	else if(findStr(content, "what's the date today") || findStr(content, "what the date today") || findStr(content, "date"))
+	{
+		cout<<"is "; getDate();
+	}
+	else cout<<"what mean about that =A="<<endl;
+}
+void human::exitTalk()
+{
+	cout<<getName()<<" %"<<getNum()<<":\n\t";
+	cout<<"Byebye, QAQ"<<endl;
 }
 
 string human::getName(){return name;}
