@@ -17,8 +17,8 @@ public:
 	human();
 	void talkAbout();
 	void talkAbout(string content);
-
 	void exitTalk();
+	void printNum();
 
 	void setNum(int num);
 	void setYourname(string name);

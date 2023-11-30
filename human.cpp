@@ -3,6 +3,7 @@
 void human::talkAbout()
 {
 	cout<<getName()<<":\n\t"<<"hi~ "<<getYourname()<<endl;
+	printNum();
 }
 //the normal talk
 void human::talkAbout(string content)
@@ -34,6 +35,19 @@ void human::exitTalk()
 {
 	cout<<getName()<<":\n\t";
 	cout<<"Byebye, QAQ"<<endl;
+	printNum();
+}
+
+//print num
+void human::printNum()
+{
+	cout<<"[";
+	for(int i = 1; i <= 10; i++)
+	{
+		if(i < this->num / 10) cout<<"=";
+		else cout<<" ";
+	}
+	cout<<"]"<<endl;
 }
 
 void human::setNum(int num){this->num = num;}
