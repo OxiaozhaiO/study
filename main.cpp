@@ -16,6 +16,7 @@ int main()
 	char input;
 	while(1)
 	{
+		cout<<"-----------------------------------"<<endl;
 		string talk; 
 
 		cout<<person->getYourname()<<":\n\t";//you turn talk
@@ -28,6 +29,7 @@ int main()
 		}
 
 		person->talkAbout(talk);//other turn
+		person->printNum();
 	}
 	savePerson(person);
 	return 0;
