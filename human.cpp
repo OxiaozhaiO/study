@@ -2,12 +2,12 @@
 //the first talk
 void human::talkAbout()
 {
-	cout<<getName()<<" %"<<getNum()<<"\n\t"<<"hi~ "<<getYourname()<<endl;
+	cout<<getName()<<":\n\t"<<"hi~ "<<getYourname()<<endl;
 }
 //the normal talk
 void human::talkAbout(string content)
 {
-	cout<<getName()<<" %"<<getNum()<<":\n\t";
+	cout<<getName()<<":\n\t";
 	
 	if(findStr(content,"hi") || findStr(content, "hello"))cout<<"hi"<<endl;
 	//get time
@@ -24,6 +24,7 @@ void human::talkAbout(string content)
 	else if(findStr(content,"fuck you") || findStr(content, "fuck") || findStr(content, "you are sb"))
 	{
 		cout<<this->requbad[randSum(3)]<<endl;
+		this->num-=20;
 	}
 	//no result
 	else cout<<"what mean about that =A="<<endl;
@@ -31,7 +32,7 @@ void human::talkAbout(string content)
 //the end talk
 void human::exitTalk()
 {
-	cout<<getName()<<" %"<<getNum()<<":\n\t";
+	cout<<getName()<<":\n\t";
 	cout<<"Byebye, QAQ"<<endl;
 }
 
