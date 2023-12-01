@@ -10,11 +10,35 @@ void human::talkAbout(string content)
 {
 	cout<<getName()<<":\n\t";
 	
-	if(findStr(content,"hi") || findStr(content, "hello"))cout<<"hi"<<endl;
+	if(findStr(content,"hi") || findStr(content, "hello"))
+	{
+		if(num >= 60) cout<<"hi~";
+		else if(num >= 30) cout<<"dont talk with me";
+		else cout<<"get out away";
+		cout<<endl;
+	}
+	else if(findStr(content, "what wrong") || findStr(content, "how are you"))
+	{
+		if(num >= 60) cout<<"im happy";
+		else if(num >= 30) cout<<"i dont talk with you";
+		else cout<<"死ねバカ!";
+		cout<<endl;
+	}
 	//get time
 	else if(findStr(content,"what the time") || findStr(content, "what time"))
 	{
-		cout<<"is "; getTime();
+		if(num >= 60) 
+		{
+			cout<<"is "; getTime();
+			cout<<":D";
+		}
+		else if(num >= 30) 
+		{
+			cout<<"is "; getTime();
+			cout<<"=^=";
+		}
+		else cout<<"i wont tell you";
+		cout<<endl;
 	}
 	//get date
 	else if(findStr(content, "what's the date today") || findStr(content, "what the date today") || findStr(content, "date"))
@@ -28,13 +52,16 @@ void human::talkAbout(string content)
 		this->num-=20;
 	}
 	//no result
-	else cout<<"what mean about that =A="<<endl;
+	else cout<<"なに? =A="<<endl;
 }
 //the end talk
 void human::exitTalk()
 {
 	cout<<getName()<<":\n\t";
-	cout<<"Byebye, QAQ"<<endl;
+	if(num >= 60) cout<<"byebye QAQ";
+	else if(num >= 30) cout<<"ok";
+	else cout<<"速く死ね!";
+	cout<<endl;
 	printNum();
 }
 
