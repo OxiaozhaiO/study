@@ -12,6 +12,7 @@ human* createHuman()
 }
 int main()
 {
+	system("clear");
 	human* person = createHuman();
 	char input;
 	while(1)
@@ -28,6 +29,7 @@ int main()
 			break;
 		}
 
+		cout<<"-----------------------------------"<<endl;
 		person->talkAbout(talk);//other turn
 		person->printNum();
 	}
