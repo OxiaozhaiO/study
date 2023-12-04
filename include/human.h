@@ -17,6 +17,7 @@ public:
 	human();
 	void talkAbout();
 	void talkAbout(string content);
+	void longtimenotalk();
 	void exitTalk();
 	void printNum();
 

@@ -17,10 +17,11 @@ void human::talkAbout(string content)
 		else cout<<"get out away";
 		cout<<endl;
 	}
-	else if(findStr(content, "what wrong") || findStr(content, "how are you"))
+	else if(findStr(content, "why")|| findStr(content, "what wrong") || findStr(content, "how are you"))
 	{
+		string words[3]={"i dont talk with you", "im in bad mood","nothing!"};
 		if(num >= 60) cout<<"im happy";
-		else if(num >= 30) cout<<"i dont talk with you";
+		else if(num >= 30) cout<<words[randSum(3)];
 		else cout<<"死ねバカ!";
 		cout<<endl;
 	}
@@ -64,7 +65,15 @@ void human::exitTalk()
 	cout<<endl;
 	printNum();
 }
-
+void human::longtimenotalk()
+{
+	cout<<getName()<<":\n\t"<<"hi~ "<<getYourname()<<endl;
+	if(num >= 60) cout<<"why not talk with me? QAQ";
+	else if(num >= 30) cout<<"hello?";
+	else cout<<"死ぬのか?";
+	cout<<endl;
+	printNum();
+}
 //print num
 void human::printNum()
 {
@@ -90,5 +99,5 @@ human::human()
 {
 	name = "SYW";
 	age = 16;
-	num = 50;
+	num = 80;
 }

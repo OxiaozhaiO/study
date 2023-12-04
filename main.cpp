@@ -1,6 +1,7 @@
 #include"include/util.h"
 #include<fstream>
 #include<string>
+#include<unistd.h>
 using namespace std;
 human* createHuman()
 {
@@ -17,8 +18,8 @@ int main()
 	char input;
 	while(1)
 	{
-		cout<<"-----------------------------------"<<endl;
 		string talk; 
+		cout<<"-----------------------------------"<<endl;
 
 		cout<<person->getYourname()<<":\n\t";//you turn talk
 		while((input=getchar())!= '\n') talk.push_back(input); // talk something
